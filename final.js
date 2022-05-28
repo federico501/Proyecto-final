@@ -4,7 +4,43 @@ if(citas){
 }else{
     localStorage.setItem("citas",JSON.stringify([]));
 }
-
+function validar(){
+    var form = document.form;
+    if(form.mascota.value==0){
+      alert("EL CAMPO NOMBRE MASCOTA ESTA VACIO ");
+      form.mascota.value="";
+      form.mascota.focus();
+      return false; 
+    }
+   
+    if(form.propietario.value==0){
+      alert("EL CAMPO  NOMBRE PROPIETARIO ESTA VACIO ");
+      form.propietario.value="";
+      form.propietario.focus();
+      return false; 
+    }
+    if(form.fecha.value==0){
+      alert("EL CAMPO FECHA ESTA VACIO ");
+      form.fecha.value="";
+      form.fecha.focus();
+      return false; 
+    }
+   
+    if(form.hora.value==0){
+      alert("EL CAMPO HORA ESTA VACIO ");
+      form.hora.value="";
+      form.hora.focus();
+      return false; 
+    }
+    if(form.sintomas.value==0){
+        alert("EL CAMPO SINTOMAS ESTA VACIO ");
+        form.sintomas.value="";
+        form.sintomas.focus();
+        return false; 
+      }
+    alert("Datos enviados con exito ");
+    
+  }
 const visualizarCitas=()=>{
     let citasHTML=``;
     let citas=JSON.parse(localStorage.getItem("citas"));
@@ -59,6 +95,9 @@ citas.push(nuevaCita);
 localStorage.setItem("citas",JSON.stringify(citas));
 document.querySelector("#form").reset();
 // visualizarCitas();
+
+
+
  }
 
 const mostrarError=(elemento,mensaje)=>{

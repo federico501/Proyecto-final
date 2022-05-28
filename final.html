@@ -26,10 +26,10 @@
         <div class="row">
           <div class="slider">
               <ul>
-                  <li><img src="/CONFERENCIA/Final/img1.jpg" alt=""></li>
-                  <li><img src="/CONFERENCIA/Final/img2.jpg" alt=""></li>
-                  <li><img src="/CONFERENCIA/Final/img3.jpg" alt=""></li>
-                  <li><img src="/CONFERENCIA/Final/img4.jpg" alt=""></li>
+                  <li><img src="/Final/img1.jpg" alt=""></li>
+                  <li><img src="/Final/img2.jpg" alt=""></li>
+                  <li><img src="/Final/img3.jpg" alt=""></li>
+                  <li><img src="/Final/img4.jpg" alt=""></li>
               </ul>
           </div> 
         </div>
@@ -41,7 +41,7 @@
                 <div id="msj-error" ></div>
            
         
-        <form  id="form" >
+        <form  id="form" name="form" >
             <label id="name-label" for="mascota">Nombre de la mascota</label>
             <input type="text" name="mascota" id="mascota" class="u-full-width" placeholder="Ingrese el nombre"
                 required />
@@ -59,13 +59,13 @@
             <label>Síntomas</label>
             <textarea class="u-full-width" name="sintomas" id="sintomas" placeholder="sintomas del paciente" ></textarea><br>
             
-            <button type="button" onclick="agregarcita()" class="u-full-width button-primary">Agregar Cita</button>
+            <button type="button"  onclick=" validar(),agregarcita()" class="u-full-width button-primary">Agregar Cita</button>
             <button type="button" onclick="visualizarCitas()" class="u-full-width button-primary">Mostrar Citas</button>
         </form>
     </div>
       <div class="one-half column">
             <h2>Citas asignadas</h2>
-            <img src="/CONFERENCIA/Final/img5.jpg" width="300" alt="">
+            <img src="/Final/img5.jpg" width="300" alt="">
         
             <div id="listadocitas"></div>  
 </div> 
